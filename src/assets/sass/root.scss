@@ -8,7 +8,7 @@
 @media only screen and (min-width: 0em) {
   // Website colors
   :root {
-    --primary: #ffba19;
+    --primary: #E69900;
     --primaryLight: #ffd675;
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
@@ -165,6 +165,8 @@
   }
 
   .container {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 92%;
     margin: auto;
@@ -305,6 +307,7 @@
       justify-content: center;
       align-items: center;
       z-index: 10;
+      
 
       img {
         width: 100%;
@@ -1143,7 +1146,7 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #footer {
-    background: #1c1c1c;
+    background: #000000;
     padding: calc(84 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
     font-size: min(4vw, 1.2em);
 
@@ -1153,17 +1156,15 @@
       text-align: center;
 
       .logo {
-        display: inline-block;
         margin: auto;
         width: auto;
         height: calc(64 / 16 * 1em);
         margin-bottom: calc(30 / 16 * 1em);
         text-align: center;
-
+        
         img {
           width: auto;
-          height: 100%;
-          display: block;
+          height: 28vh;
         }
       }
 
@@ -1278,7 +1279,7 @@
       font-size: calc(16 / 16 * 1rem);
 
       a {
-        color: var(--primary);
+        color: #FA3343;
         text-decoration: none;
         font-size: calc(16 / 16 * 1rem);
 

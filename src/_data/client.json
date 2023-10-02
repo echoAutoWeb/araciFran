@@ -2,14 +2,12 @@
 	"name": "Banco de Conteúdos Conceito",
 	"email": "help@codestitch.app",
 	"phoneForTel": "555-779-4407",
-	"phoneFormatted": "(555) 779-4407",
+	"phoneFormatted": "(51)  0 0000-0000",
 	"address": {
-		"lineOne": "First Address Line",
-		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
-		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+		"lineOne": "Dr. Castro de Menezes - Assunção",
+		"lineTwo": "Porto Alegre/RS",
+		"city": "Porto Alegre",
+		"state": "RS"
 	},
 	"domain": "editoraconceito.com.br/"
 }
