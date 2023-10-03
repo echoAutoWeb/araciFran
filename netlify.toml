@@ -18,4 +18,7 @@
   compress = true
 [build.processing.html]
   pretty_urls = false
+  [[edge_functions]]
+path = "/access/*"
+function = "login"
 
