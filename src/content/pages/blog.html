@@ -135,6 +135,55 @@ eleventyNavigation:
         await onShare(imageSrc);
       })
     });
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+
+    const supabaseUrl = 'https://aninbahxvbjadcxgpxej.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFuaW5iYWh4dmJqYWRjeGdweGVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQxMTcxMjMsImV4cCI6MjAwOTY5MzEyM30.qTAhjpYNJZWlaTnr9JFKvJA8wpou8DLoW9q0B4929u4';
+
+    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+    async function Login(email, password) {
+      const {data} = await supabaseClient
+        .auth
+        .signInWithPassword({email, password})
+      if (
+        data
+        ?.session) {
+        setLocalstorage(data.session, data.user);
+        //aqui eu loguei nao tem problema
+
+      } else {
+        alert("usuario e senha incorretos")
+      }
+
+    }
+
+    function setLocalstorage(session, user) {
+      localStorage.setItem("token", JSON.stringify(
+        session
+        ?.access_token || null))
+
+    }
+
+    function loadPage() {
+
+      if (localStorage.getItem("token")) {
+        console.log("ok")
+      } else {
+        alert("nao autorizado")
+        window.location.href = '/'
+        //redericona para tua tela login
+
+      }
+
+    }
+
+    loadPage();
+    Login("test@test.com", "12345")
   </script>
 
 {% endblock %}
