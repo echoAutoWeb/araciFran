@@ -20,7 +20,7 @@
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
-    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --headerFontSize: clamp(2.2rem, 3.9vw, 4rem);
     --bodyFontSize: 1rem;
 
     /* 60px - 100px top and bottom */
@@ -1374,7 +1374,7 @@
       width: 96%;
       margin: auto;
       text-align: center;
-      margin-top: calc(64 / 16 * 1rem);
+      margin-top: calc(32 / 16 * 1rem);
       line-height: calc(36 / 16 * 1rem);
       font-size: calc(16 / 16 * 1rem);
 

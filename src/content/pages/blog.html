@@ -1,5 +1,5 @@
 ---
-title: "Novidades"
+title: "Acervo"
 description: "Meta description for the page"
 preloadImg: "/assets/images/cabinets2.jpg"
 permalink: "blog/"
@@ -19,9 +19,7 @@ permalink: "blog/"
     }
 
     function loadPage() {
-      if (localStorage.getItem("token")) {
-
-      } else {
+      if (localStorage.getItem("token")) {} else {
         alert("Entre para acessar o conteúdo!");
         window.location.href = "/";
       }
@@ -35,7 +33,7 @@ permalink: "blog/"
   <!-- ============================================ -->
 
   <section id="int-hero">
-    <h1 id="home-h">Novidades</h1>
+    <h1 id="home-h">Acervo</h1>
     <picture>
       <source
       media="(max-width: 600px)"
