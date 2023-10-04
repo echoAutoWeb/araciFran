@@ -5,7 +5,7 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #ffba19;
+    --primary: #e69900;
     --primaryLight: #ffd675;
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
@@ -121,6 +121,90 @@
     color: var(--bodyTextColor);
     overflow-x: hidden;
   }
+  #cs-form label {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 700;
+    /* 12px - 20px */
+    margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
+    color: var(--headerColor);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #cs-form .cs-label-message {
+    /* 32px - 48px */
+    margin-bottom: clamp(2rem, 6.3vw, 3rem);
+  }
+  #cs-form input,
+  #cs-form textarea {
+    font-size: 1rem;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+    border: 1px solid #b4b2c7;
+    border-radius: 0.25rem;
+    /* prevents border & padding from affecting height */
+    box-sizing: border-box;
+    transition: border 0.3s;
+  }
+  #cs-form input:hover,
+  #cs-form textarea:hover {
+    border: 1px solid var(--primary);
+  }
+  #cs-form textarea {
+    font-family: inherit;
+    padding-top: 1.25rem;
+    min-height: 7.5rem;
+  }
+  #cs-form .cs-button-solid {
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+  }
+  .cs-button-solid-round {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+    line-height: 3.125em;
+    height: 3.125rem;
+    text-align: center;
+    padding: 0 1.875rem;
+    position: relative;
+    z-index: 1;
+    background-color: var(--primary);
+    color: #000000;
+    transition: color 0.3s;
+    transition-delay: 0.1s;
+    color: #000;
+    transition: color 0.3s;
+    transition-delay: 0.1s;
+  }
+  .cs-button-solid-round:hover {
+    color: #fff;
+  }
+  .cs-button-solid-round:hover:before {
+    width: 100%;
+  }
+  .cs-button-solid-round:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000;
+    width: 0;
+    transition: width 0.3s;
+  }
   *,
   *:before,
   *:after {
@@ -132,6 +216,8 @@
     transition: background-color 0.3s;
   }
   .container {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 92%;
     margin: auto;
@@ -344,7 +430,7 @@
     width: auto;
     min-width: 40%;
     height: 65vh;
-    overflow: scroll;
+    overflow: none;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -938,7 +1024,7 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #footer {
-    background: #1c1c1c;
+    background: #000000;
     padding: 5.25rem 0 1.25rem;
     font-size: min(4vw, 1.2em);
   }
@@ -948,7 +1034,6 @@
     text-align: center;
   }
   #footer .left-section .logo {
-    display: inline-block;
     margin: auto;
     width: auto;
     height: 4em;
@@ -957,8 +1042,7 @@
   }
   #footer .left-section .logo img {
     width: auto;
-    height: 100%;
-    display: block;
+    height: 28vh;
   }
   #footer .left-section p {
     font-size: 0.875rem;
@@ -1056,7 +1140,7 @@
     font-size: 1rem;
   }
   #footer .credit a {
-    color: var(--primary);
+    color: #fa3343;
     text-decoration: none;
     font-size: 1rem;
   }

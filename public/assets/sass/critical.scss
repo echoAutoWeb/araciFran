@@ -122,7 +122,7 @@
 		.cs-button-solid {
 			line-height: clamp(2.875em, 5.5vw, 3.5em);
 			height: initial;
-			margin-bottom: calc(16 / 16 * 1rem);
+			margin-bottom: 8px;
 		}
 
 		.cs-button-transparent {
@@ -205,10 +205,6 @@
 			}
 		}
 
-		.cs-button-solid {
-			margin-bottom: 0;
-			margin-right: calc(20 / 16 * 1rem);
-		}
 	}
 }
 

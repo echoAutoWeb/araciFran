@@ -3,9 +3,6 @@ title: "Novidades"
 description: "Meta description for the page"
 preloadImg: "/assets/images/cabinets2.jpg"
 permalink: "blog/"
-eleventyNavigation:
-  key: Novidades
-  order: 500
 ---
 
 {% extends "layouts/base.html" %}
@@ -14,7 +11,25 @@ eleventyNavigation:
 
 {% endblock %}
 {% block body %}
+  <script>
+    function setLocalstorage(session, user) {
+      localStorage.setItem("token", JSON.stringify(
+        session
+        ?.access_token || null));
+    }
 
+    function loadPage() {
+      if (localStorage.getItem("token")) {
+
+      } else {
+        alert("Entre para acessar o conteúdo!");
+        window.location.href = "/";
+      }
+    }
+  </script>
+  <script>
+    loadPage();
+  </script>
   <!-- ============================================ -->
   <!--                    LANDING                   -->
   <!-- ============================================ -->
@@ -92,12 +107,12 @@ eleventyNavigation:
     </div>
   </div>
   <script>
-    const shareButtons = document.querySelectorAll('.share-button');
-    const recentArticlesContainers = document.querySelectorAll('.recent-articles');
+    const shareButtons = document.querySelectorAll(".share-button");
+    const recentArticlesContainers = document.querySelectorAll(".recent-articles");
 
     async function getShareData(imageSrc) {
       const imageBlob = await(await fetch(imageSrc)).blob();
-      const imageFile = new File([imageBlob], 'image.png', {type: imageBlob.type});
+      const imageFile = new File([imageBlob], "image.png", {type: imageBlob.type});
       return {files: [imageFile]};
     }
 
@@ -113,17 +128,17 @@ eleventyNavigation:
     }
 
     recentArticlesContainers.forEach((container, index) => {
-      const shareButton = container.querySelector('.share-button');
-      const textElement = container.querySelector('.blog-desc');
-      const imageElement = container.querySelector('img');
+      const shareButton = container.querySelector(".share-button");
+      const textElement = container.querySelector(".blog-desc");
+      const imageElement = container.querySelector("img");
 
-      shareButton.addEventListener('click', async () => {
+      shareButton.addEventListener("click", async () => {
         const imageSrc = imageElement
           ? imageElement.currentSrc
-          : '';
+          : "";
         const text = textElement
           ? textElement.innerText
-          : '';
+          : "";
 
         if (text) {
           navigator
@@ -131,59 +146,9 @@ eleventyNavigation:
             .writeText(text);
           //alert("Texto copiado para a Área de Transferência!");
         }
-
         await onShare(imageSrc);
-      })
+      });
     });
-
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-  <script>
-
-    const supabaseUrl = 'https://aninbahxvbjadcxgpxej.supabase.co';
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFuaW5iYWh4dmJqYWRjeGdweGVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQxMTcxMjMsImV4cCI6MjAwOTY5MzEyM30.qTAhjpYNJZWlaTnr9JFKvJA8wpou8DLoW9q0B4929u4';
-
-    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
-
-    async function Login(email, password) {
-      const {data} = await supabaseClient
-        .auth
-        .signInWithPassword({email, password})
-      if (
-        data
-        ?.session) {
-        setLocalstorage(data.session, data.user);
-        //aqui eu loguei nao tem problema
-
-      } else {
-        alert("usuario e senha incorretos")
-      }
-
-    }
-
-    function setLocalstorage(session, user) {
-      localStorage.setItem("token", JSON.stringify(
-        session
-        ?.access_token || null))
-
-    }
-
-    function loadPage() {
-
-      if (localStorage.getItem("token")) {
-        console.log("ok")
-      } else {
-        alert("nao autorizado")
-        window.location.href = '/'
-        //redericona para tua tela login
-
-      }
-
-    }
-
-    loadPage();
-    Login("test@test.com", "12345")
   </script>
 
 {% endblock %}
