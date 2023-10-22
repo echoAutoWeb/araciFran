@@ -14,6 +14,6 @@ date: 2023-10-22T00:18:03.154Z
 tags:
   - post
 image: /assets/images/blog/14-.jpg
-imageAlt: .
+imageAlt: ..
 ---
 .
