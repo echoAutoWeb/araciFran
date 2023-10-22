@@ -7,7 +7,7 @@ description: "O que trata a Medicina Orofacial?  Ela trata as causas antes do
   Medicina-Orofacial é feito o diagnóstico com vistas à manutenção da saúde e
   não o diagnóstico da doença, pois queremos que o paciente, o DONO do dente não
   fique doente.  E isso só é possível se primeiro corrigirmos as disfunções. "
-author: Editora Conceito
+author: Odontocrônicos
 date: 2023-10-22T00:00:26.688Z
 tags:
   - post
