@@ -11,7 +11,7 @@ description: "O que é a filosofia de tratamento Odontocrônicos©?  Trata-se de
   inteligentes, pela falta de oxigênio e glicose. Uma célula alimentada é uma
   célula inteligente, caso contrário ela começa a ter dificuldades que foram
   identificadas na pesquisa que resultou no Odontocrônicos©. "
-author: .
+author: Odontocrônicos
 date: 2023-10-22T00:07:06.872Z
 tags:
   - post
