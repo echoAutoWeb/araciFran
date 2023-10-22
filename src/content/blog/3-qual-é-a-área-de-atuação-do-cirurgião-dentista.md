@@ -10,6 +10,6 @@ date: 2023-10-22T00:05:45.825Z
 tags:
   - post
 image: /assets/images/blog/3-.jpg
-imageAlt: .
+imageAlt: ..
 ---
 .
