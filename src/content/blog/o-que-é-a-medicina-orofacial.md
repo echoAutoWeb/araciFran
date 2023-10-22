@@ -1,5 +1,5 @@
 ---
-title: O que é a Medicina Orofacial?
+title: 2 - O que é a Medicina Orofacial?
 description: "O que é a Medicina Orofacial?  É a Odontologia do futuro, que é o
   diagnóstico para manutenção da saúde através da identificação das funções e
   eventuais disfunções do nariz, da boca e hormônios, isto é, a Saúde através do
