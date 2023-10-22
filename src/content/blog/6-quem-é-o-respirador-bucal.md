@@ -9,6 +9,6 @@ date: 2023-10-22T00:07:56.242Z
 tags:
   - post
 image: /assets/images/blog/6-.jpg
-imageAlt: .
+imageAlt: ..
 ---
 .
