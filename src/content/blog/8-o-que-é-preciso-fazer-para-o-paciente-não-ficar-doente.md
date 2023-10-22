@@ -10,7 +10,7 @@ author: Odontocrônicos
 date: 2023-10-22T00:08:48.601Z
 tags:
   - post
-image: /assets/images/blog/9-.jpg
+image: /assets/images/blog/8-.jpg
 imageAlt: ..
 ---
 .
