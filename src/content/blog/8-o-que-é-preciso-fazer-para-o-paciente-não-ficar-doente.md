@@ -6,7 +6,7 @@ description: "O que é preciso fazer para o paciente não ficar doente?  É prec
   esperar ficar doente para então tratar. Corrigir disfunções evita todo esse
   caminho doloroso em que o paciente passa, pois estando o organismo equilibrado
   o indivíduo vai manter sua saúde. Simples assim. "
-author: .
+author: Odontocrônicos
 date: 2023-10-22T00:08:48.601Z
 tags:
   - post
