@@ -8,6 +8,6 @@ date: 2023-10-22T00:18:29.212Z
 tags:
   - post
 image: /assets/images/blog/15-.jpg
-imageAlt: .
+imageAlt: ..
 ---
 .
