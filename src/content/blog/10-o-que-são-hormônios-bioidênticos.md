@@ -7,7 +7,7 @@ description: "O que são hormônios bioidênticos?  São chamados assim por sere
   na pele. Os hormônios bioidênticos nano, tem ainda melhores resultados pois a
   ação é muito rápida, pois são transportados por nano partículas que
   rapidamente acessam a nossa corrente sanguínea, em cerca de minutos. "
-author: ;
+author: Odontocrônicos
 date: 2023-10-22T00:11:19.161Z
 tags:
   - post
