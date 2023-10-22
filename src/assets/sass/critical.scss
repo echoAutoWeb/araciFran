@@ -88,14 +88,14 @@
       /* 60px - 220px */
       margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
       margin: auto;
-      width: 80vw;
       /* 464px - 562px */
       max-width: clamp(29em, 60vw, 35.125em);
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       flex-wrap: wrap;
       box-sizing: border-box;
+      flex-direction: column;
     }
 
     .cs-topper {

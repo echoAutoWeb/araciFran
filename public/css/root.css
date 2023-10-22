@@ -51,7 +51,7 @@
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
-    width: auto;
+    width: 100%;
     line-height: 3.125em;
     height: 3.125rem;
     text-align: center;
@@ -59,6 +59,7 @@
     position: relative;
     z-index: 1;
     background-color: var(--primary);
+    border-radius: 4px;
     color: #000;
     transition: color 0.3s;
     transition-delay: 0.1s;
@@ -861,11 +862,11 @@
   }
   #int-hero h1 {
     color: #fff;
-    font-size: 5rem;
+    font-size: 2rem;
     text-align: center;
     margin: 0 auto;
     position: relative;
-    width: 96%;
+    width: auto;
     max-width: 31.25rem;
     margin-top: 4.375rem;
     margin-bottom: 1.875rem;
