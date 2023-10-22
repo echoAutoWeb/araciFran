@@ -5,7 +5,7 @@ description: "Qual é a área de atuação do Cirurgião-Dentista?  Cabeça e pe
   direito ao esquerdo. Compete ao Cirurgião-Dentista trabalhar com as funções do
   aparelho respiratório - funções do nariz - e do aparelho digestório - funções
   da boca - no tratamento e manutenção da Saúde. "
-author: .
+author: Odontocrônicos
 date: 2023-10-22T00:05:45.825Z
 tags:
   - post
