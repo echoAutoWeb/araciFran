@@ -11,7 +11,7 @@ author: Odontocrônicos
 date: 2023-10-22T00:00:26.688Z
 tags:
   - post
-image: /assets/images/blog/1-.jpg
+image: /assets/images/blog/2-.jpg
 imageAlt: odonto-cronicos
 ---
 .
