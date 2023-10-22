@@ -1,5 +1,5 @@
 ---
-title: 1 -O que trata a Medicina Orofacial?
+title: 1 - O que trata a Medicina Orofacial?
 description: "O que trata a Medicina Orofacial?  Ela trata as causas antes do
   surgimento da doença. Ela corrige as disfunções das células, dos tecidos e dos
   órgãos antes que eles fiquem doentes. Diferente então da Medicina curativa
