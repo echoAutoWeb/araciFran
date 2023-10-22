@@ -5,7 +5,7 @@ description: "Como a Medicina Orofacial enxerga o paciente, o DONO do
   o trata recuperando as FUNÇÕES da BOCA e do NARIZ, os dois órgãos mais
   importantes do corpo humano e o equilíbrio hormonal para a MANUTENÇÃO DA SAÚDE
   desse paciente. "
-author: ;
+author: Odontocrônicos
 date: 2023-10-22T00:06:24.892Z
 tags:
   - post
