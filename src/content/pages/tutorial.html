@@ -46,17 +46,27 @@ order: 200
                 box-sizing: border-box;
                 max-width: 100%;
                 margin-bottom: 16px;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
             }
 
             .flex-item img {
                 width: 100%;
                 margin-top: 16px;
             }
+            .chromeicon{
+                width: 50%!important;
+            }
         </style>
     </head>
 
     <body>
         <div class="flex-container">
+            <div class="flex-item">
+                <img class="chromeicon" src="/assets/images/chromeicon.png">
+                <p>O Banco de Conteúdos Odontocrônicos funciona melhor no Navegador Chrome.<br>Seu funcionamento não é garantido em outros navegadores!</p>
+            </div>
             <div class="flex-item">
                 <p>1 - Escolha sua postagem e toque no botão COMPARTILHAR.<br>O texto será copiado para sua área de
                     transferência.</p>
