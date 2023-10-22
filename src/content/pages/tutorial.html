@@ -1,0 +1,99 @@
+---
+title: 'Tutorial'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'tutorial/'
+eleventyNavigation:
+key: Como funciona?
+order: 200
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/css/contact.css">
+{% endblock %}
+
+{% block body %}
+<section id="int-hero">
+    <h1 id="home-h">Como funciona?</h1>
+    <picture>
+        <source media="(max-width: 600px)" srcset="/assets/images/tutorial.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/tutorial.jpg">
+        <img aria-hidden="true" decoding="async" src="/assets/images/tutorial.jpg" alt="many questions" loading="eager"
+            width="2500" height="1667">
+    </picture>
+</section>
+
+<section id="cs-contact">
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <style>
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .flex-item {
+                box-shadow: 0 2px 5px #0000005c, 0 1px 2px #0000003d !important;
+                border-radius: calc(12 / 16 * 1em);
+                border: 1px solid rgba(0, 0, 0, 0.121);
+                padding: 16px; /* Adjust the padding as needed */
+                box-sizing: border-box;
+                max-width: 100%;
+                margin-bottom: 16px;
+            }
+
+            .flex-item img {
+                width: 100%;
+                margin-top: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <div class="flex-item">
+                <p>1 - Escolha sua postagem e toque no botão COMPARTILHAR.<br>O texto será copiado para sua área de
+                    transferência.</p>
+                <img src="/assets/images/tut01.jpeg" alt="Image 1">
+            </div>
+            <div class="flex-item">
+                <p>2 - Caso o ícone do Instagram não apareça, toque em 'Mais'.</p>
+                <img src="/assets/images/tut02.jpeg" alt="Image 2">
+            </div>
+            <div class="flex-item">
+                <p>3 - Toque no ícone do Instagram.</p>
+                <img src="/assets/images/tut03.jpeg" alt="Image 3">
+            </div>
+            <div class="flex-item">
+                <p>4 - Selecione 'FEED' para postar no perfil do Instagram.</p>
+                <img src="/assets/images/tut04.jpeg" alt="Image 4">
+            </div>
+            <div class="flex-item">
+                <p>5 - Toque na flecha para direita para continuar...</p>
+                <img src="/assets/images/tut05.jpeg" alt="Image 5">
+            </div>
+            <div class="flex-item">
+                <p>6 - Toque e segure na caixa 'Escreva uma legenda...' E cole o texto.</p>
+                <img src="/assets/images/tut06.jpeg" alt="Image 6">
+            </div>
+            <div class="flex-item">
+                <p>7 - Sua postagem está pronta para ser compartilhada!<br>Toque na flecha azul novamente para finalizar o
+                    processo.</p>
+                <img src="/assets/images/tut07.jpeg" alt="Image 7">
+            </div>
+            <a href="/blog" class="cs-button-solid">
+                Ir para o acervo!
+            </a>
+        </div>
+    </body>
+
+    </html>
+
+</section>
+{% endblock %}

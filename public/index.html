@@ -46,88 +46,85 @@
     <script defer src="/assets/js/dark.js"></script>
 
     
-    <link rel="stylesheet" href="/css/local.css"/>
-    <link rel="stylesheet" href="/css/critical.css"/>
+<link rel="stylesheet" href="/css/local.css" />
+<link rel="stylesheet" href="/css/critical.css" />
 
-    <!-- Script for Netlify Identity -->
-    <script
-  defer
-  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on("init", (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on("login", () => {
-                                document.location.href = "/admin/";
-                            });
-                    }
-                });
-        }
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-    <script>
-        function loadPage() {
-            if (localStorage.getItem("token")) {
-                console.log("Token presente.");
-                const csForm = document.getElementById("cs-form");
-                if (csForm) {
-                    const emailInput = csForm.querySelector("#email");
-                    const passwordInput = csForm.querySelector("#password");
-                    const accessButton = csForm.querySelector("button");
-                    emailInput.style.display = "none";
-                    passwordInput.style.display = "none";
-                    accessButton.setAttribute("onclick", "redirectToContent()");
-                    accessButton.textContent = "ACESSAR";
+<!-- Script for Netlify Identity -->
+<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script defer>
+    if (window.netlifyIdentity) {
+        window
+            .netlifyIdentity
+            .on("init", (user) => {
+                if (!user) {
+                    window
+                        .netlifyIdentity
+                        .on("login", () => {
+                            document.location.href = "/admin/";
+                        });
                 }
+            });
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+    function loadPage() {
+        if (localStorage.getItem("token")) {
+            console.log("Token presente.");
+            const csForm = document.getElementById("cs-form");
+            if (csForm) {
+                const emailInput = csForm.querySelector("#email");
+                const passwordInput = csForm.querySelector("#password");
+                const accessButton = csForm.querySelector("button");
+                emailInput.style.display = "none";
+                passwordInput.style.display = "none";
+                accessButton.setAttribute("onclick", "redirectToContent()");
+                accessButton.textContent = "ACESSAR";
             }
         }
+    }
 
-        async function user_login(email, password) {
-            const supabaseUrl = "https://aninbahxvbjadcxgpxej.supabase.co";
-            const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFuaW5iYWh4dmJqYWRjeGdweGVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQxMTcxMjMsImV4cCI6MjAwOTY5MzEyM30.qTAhjpYNJZWlaTnr9JFKvJA8wpou8DLoW9q0B4929u4";
-            const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+    async function user_login(email, password) {
+        const supabaseUrl = "https://aninbahxvbjadcxgpxej.supabase.co";
+        const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFuaW5iYWh4dmJqYWRjeGdweGVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQxMTcxMjMsImV4cCI6MjAwOTY5MzEyM30.qTAhjpYNJZWlaTnr9JFKvJA8wpou8DLoW9q0B4929u4";
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
-            try {
-                const {data, error} = await supabaseClient
-                    .auth
-                    .signInWithPassword({email, password});
-                if (
-                    data
+        try {
+            const { data, error } = await supabaseClient
+                .auth
+                .signInWithPassword({ email, password });
+            if (
+                data
                     ?.session) {
-                    setLocalstorage(data.session, data.user);
-                    redirectToContent();
-                } else {
-                    alert("Usuario e senha incorretos");
-                }
-            } catch (error) {
-                console.error("Error during login:", error.message);
-                alert("Error during login. Please try again.");
+                setLocalstorage(data.session, data.user);
+                redirectToContent();
+            } else {
+                alert("Usuario e senha incorretos");
             }
+        } catch (error) {
+            console.error("Error during login:", error.message);
+            alert("Error during login. Please try again.");
         }
+    }
 
-        function setLocalstorage(session, user) {
-            localStorage.setItem("token", JSON.stringify(
-                session
+    function setLocalstorage(session, user) {
+        localStorage.setItem("token", JSON.stringify(
+            session
                 ?.access_token || null));
-        }
+    }
 
-        function performLogin() {
-            const form = document.getElementById("cs-form");
-            const formData = new FormData(form);
-            user_login(formData.get("email"), formData.get("password"));
-        }
+    function performLogin() {
+        const form = document.getElementById("cs-form");
+        const formData = new FormData(form);
+        user_login(formData.get("email"), formData.get("password"));
+    }
 
-        function redirectToContent() {
-            window.location.href = "/blog";
-        }
-    </script>
+    function redirectToContent() {
+        window.location.href = "/blog";
+    }
+</script>
 
     
 
@@ -180,22 +177,6 @@
                     
                     <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
                     
-                        <!-- Define a hasChild variable to make it easier to test what links are dropdowns-->
-                        
-
-                        <!-- If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes-->
-                        <li class="cs-li " >
-
-                            <!-- Similarly, if the link is active, apply the necessary classes -->
-                            <a href="/" class="cs-li-link  cs-active ">
-                                Início
-                                
-                            </a>
-
-                            <!-- Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link -->
-                            
-                        </li>
-                    
                 </ul>
             </div>
         </nav>
@@ -207,50 +188,41 @@
     <main id="main">
       
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">Seja Bem-Vindo(a) ao </span>
-                <h1 class="cs-title">Banco de Conteúdos</h1>
-                <img
-        src="assets/images/logo-white-fullsize.png"
-        style="margin-bottom: clamp(2.5rem, 4vw, 3rem); width: 60vw; min-width: 320px"
-/>
-                <p class="cs-text">
-        Descubra as novidades e explore nosso acervo de postagens prontas.
-        Encontre inspiração e comece agora!
-      </p>
-                <form id="cs-form" name="Contact Form" method="post">
-                    <input type="text" id="email" name="email" placeholder="Email"/>
-                    <input type="text" id="password" name="password" placeholder="Senha"/>
-                    <button type="button" class="cs-button-solid" onclick="performLogin()">
-          ENTRAR
-        </button>
-                </form>
-                <button type="button" class="cs-button-solid-round">Como funciona?</button>
-            </div>
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+<section id="hero">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            <span class="cs-topper">Seja Bem-Vindo(a) ao </span>
+            <h1 class="cs-title">Banco de Conteúdos</h1>
+            <img src="assets/images/logo-white-fullsize.png"
+                style="margin-bottom: clamp(2.5rem, 4vw, 3rem); width: 60vw; min-width: 320px" />
+            <p class="cs-text">
+                Descubra as novidades e explore nosso acervo de postagens prontas.
+                Encontre inspiração e comece agora!
+            </p>
+            <form id="cs-form" name="Contact Form" method="post">
+                <input type="text" id="email" name="email" placeholder="Email" />
+                <input type="password" id="password" name="password" placeholder="Senha" />
+                <button type="button" class="cs-button-solid" onclick="performLogin()">
+                    ENTRAR
+                </button>
+            </form>
+            <button type="button" class="cs-button-solid-round">Como funciona?</button>
         </div>
-        <script>
-            loadPage();
-        </script>
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp"/>
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.webp"/>
-            <img
-      aria-hidden="true"
-      decoding="async"
-      src="/assets/images/landing.webp"
-      alt="new home"
-      width="2500"
-      height="1667"
-      loading="eager"
-/>
-        </picture>
-    </section>
+    </div>
+    <script>
+        loadPage();
+    </script>
+    <!-- Background Image -->
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp" />
+        <source media="(min-width: 601px)" srcset="/assets/images/landing.webp" />
+        <img aria-hidden="true" decoding="async" src="/assets/images/landing.webp" alt="new home" width="2500"
+            height="1667" loading="eager" />
+    </picture>
+</section>
 
 
     </main>
